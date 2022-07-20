@@ -1,0 +1,43 @@
+@model List<StaffModel>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us - Our Team</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/aboutUs2.css"/>
+        <script src="/js/aboutUs2.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <h2><span style="color:red">O</span>
+                <span style="color:orange">U</span>
+                <span id="space" style="color:yellow">R</span>
+                <span style="color:green">T</span>
+                <span style="color:blue">E</span>
+                <span style="color:indigo">A</span>
+                <span style="color:violet">M</span>
+            </h2>
+            <p style="font-size:20px;">Our Lovely team consists of me, the owner, a very private person and</p>
+            <p style="font-size:20px; margin-bottom: 20px;">my wonderful nail technicians that I am very proud of.</p>
+            <!-- <p>Our Lovely team consists of me, the owner, a very private person.</p> -->
+            <div class="allstaff">
+                <div class="container">
+                    <div class="staffList">
+                        @for (var x = 0; x <= Model.Count -1; x++)
+                        {
+                            <div>
+                                <h3>Branch: @Model[x].StaffBranches</h3>
+                                <h4>@Model[x].StaffNames</h4>
+                                <p>@Model[x].StaffDescriptions</p>
+                                <img src="./media/@Model[x].StaffImages" width="350px;" height="430px;" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+    </body>
+</html>

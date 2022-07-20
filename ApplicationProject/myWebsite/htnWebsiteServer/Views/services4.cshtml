@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Services - Cryotherapy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/services4.css"/>
+        <script src="./js/services4.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <h2><span style="color:red">C</span>
+                <span style="color:orange">R</span>
+                <span style="color:yellow">Y</span>
+                <span style="color:green">O</span>
+                <span style="color:blue">T</span>
+                <span style="color:indigo">H</span>
+                <span style="color:violet">E</span>
+                <span style="color:red">R</span>
+                <span style="color:orange">A</span>
+                <span style="color:yellow">P</span>
+                <span style="color:green">Y</span>
+            </h2>
+            <p>Details:</p>
+            <p>• Cryotherapy uses nitrogen or argon gas to create extremely cold temperatures to destroy diseased tissue. Topical cryotherapy destroys diseased tissue outside the body by applying liquid nitrogen directly with a cotton swab or spray device.</p>
+            <p>• It is performed in your doctor's office while you're awake. The procedure usually takes around 10 minutes.</p>
+            <p>₱rice: <i><b>₱ 2999 </b></i></p>
+            
+            <div class="vid">
+                <video class="video" autoplay muted loop>
+                    <source src="media/video.mp4" type="video/mp4">
+                </video>
+                <a href="/bookNow"><button class="book_button">BOOK NOW!</button></a>
+            </div>
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+        <script src="./js/services4.js"></script>
+    </body>
+</html>

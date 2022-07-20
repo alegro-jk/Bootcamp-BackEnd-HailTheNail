@@ -1,0 +1,42 @@
+@model List<WhatsNewModel>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What's New</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/whatsNew.css"/>
+        <script src="./js/whatsNew.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <h2><span class="space" style="color:red">Check</span>
+                <span class="space" style="color:orange">out</span>
+                <span class="space" style="color:yellow">the</span>
+                <span class="space" style="color:green">Latest</span>
+                <span class="space" style="color:blue">Trends</span>
+                <span style="color:indigo">!</span>
+                <span style="color:violet">!</span>
+                <span style="color:pink">!</span>
+            </h2>
+            <p>Click the picture to view the article</p>
+
+            <div class="container">
+                <div class="wnew">
+                    @for (var x = 0; x <= Model.Count -1; x++)
+                    {
+                        <div>
+                            <a href="@Model[x].SiteUrl"> 
+                                <img src="./media/@Model[x].Image" id="trend">
+                            </a>
+                            <p id="source"><i>Image source: @Model[x].ImageSource</i></p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+        <script src="./js/whatsNew.js"></script>
+    </body>
+</html>

@@ -1,0 +1,272 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    header {
+        height: 80px;
+        width:100;
+    }
+    .menubar {
+        width: 100%;
+        background-color: white;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        padding-right: 0;
+        padding-bottom: 10px;
+        top: 0;
+        padding-top: 10px;
+        border-bottom: 0.25px solid rgb(255,95,162);
+    }
+    #menu {
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        gap: 45px;
+        padding-left: 200px;
+    }
+    .menulink, #story, #team, #serv1, #serv2, #serv3, #serv4, #serv5 {
+        transition: 0.3s ease;
+    }
+    .menulink:hover {
+        color: rgb(255,95,162);
+    }
+    #story:hover, #team:hover, #serv1:hover, #serv2:hover, #serv3:hover, #serv4:hover, #serv5:hover {
+        color: rgb(255,95,162);
+    }
+    .logo {
+        height: 70px;
+        padding-left: 3vw;
+        width: 200px;
+        cursor: pointer;
+    }
+    #drop1 {
+        position: relative;
+        display: inline-block;
+        /* padding-top: 5px; */
+        /* padding: 5px 0; */
+        z-index: 5;
+    }
+    #drop2 {
+        position: relative;
+        display: inline-block;
+        /* padding-top: 5px; */
+        /* padding-bottom: 5px; */
+        /* padding: 5px 0; */
+    }
+    .drop1-cont, .drop2-cont {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .drop1-cont a, .drop2-cont a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+    #drop1:hover .drop1-cont {display: block;}
+    #drop2:hover .drop2-cont {display: block;}
+    .changepic {
+        width: 100vw;
+        height: 85vh;
+        z-index: -1;
+    }
+    .banner {
+        position: static;
+        top: 80px;
+        background-size: cover;
+        background-position: center;
+        padding-top: 10px;
+        margin-bottom: 100px;
+    }
+
+    .footer {
+        height: 60px;
+        background-color: white;
+        width: 100%;
+        padding: 0;
+        position: fixed;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        bottom: 0;
+        right: 0;
+        height: 80px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-top: 0.25px solid rgb(255,95,162);
+        text-align: center;
+        justify-content: center;
+    }
+    #foot {
+        display: block;
+    }
+    #foot + #foot {
+    margin-left: 150px; padding-left: 150px;
+    }
+    .menubutton {
+    display: none;
+    }
+    .clear {
+        clear: both;
+    }
+    .banner h2 {
+        font-size: 50px;
+        padding-left: 150px;
+    }
+    .banner p {
+        font-size: 20px;
+        padding-left: 150px;
+        padding-right: 100px;
+        text-align: justify;
+    }
+    .book_button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        /* display: inline-block; */
+        font-size: 16px;
+        /* margin: 4px 2px; */
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: white; 
+        color: black; 
+        border: 2px solid #4CAF50;
+        margin-left: 1150px;
+    }
+    .book_button:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .lilspace {
+        display: inline;
+    }
+    #space {
+        padding-right: 35px; 
+    }
+
+    @media only screen and (min-width: 641px) and (max-width: 1007px) {
+        .menubutton {
+            display: none;
+        }
+        #menu {
+            float: right;
+            display: block;
+        }
+        .menuitem {
+            display: inline;
+        }
+        .menuitem + .menuitem {
+            margin-left: 8px; 
+            padding-left: 8px;
+        }
+        .footer {
+            justify-content: center;
+        }
+        #foot {
+            display: block;
+        }
+        #foot + #foot {
+        margin-left: 100px; padding-left: 100px;
+        }
+        .careers {
+        padding-left: 0px;
+        padding-right: 0px;
+        }
+        .contactUs {
+            padding-right: 0px;
+        }
+        .contactIcon {
+            font-size: 15px;
+            /* padding: 10px; */
+        }
+        .banner h2 {
+            font-size: 50px;
+            padding-left: 0px;
+            text-align: center;
+        }
+        .banner p {
+            font-size: 20px;
+            padding-left: 100px;
+            /* padding-right: 100px; */
+            text-align: justify;
+        }
+        .book_button {
+            margin-left: 500px;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        .menubutton {
+            position: absolute;
+            display: inline;
+            left: 90vw;
+            font-size: 50px;
+            /* float: right; */
+        }
+        #menu {
+            display: none;
+            position: absolute; 
+            top: 48px;
+            right: 0px; 
+            background: rgb(255, 232, 236);
+            padding: 20px;
+            padding-right: 50px;
+        }
+        .showmenu {
+            display: block;
+        }
+        .hiddenmenu {
+            display: none;
+        }
+        .menuitem {
+            display: block;
+        }
+        .menuitem + .menuitem {
+            margin-top: 8px;
+        }
+        .footer {
+            justify-content: center;
+        }
+        #foot {
+            display: block;
+        }
+        #foot + #foot {
+        margin-left: 30px; padding-left: 30px;
+        }
+        .lilspace {
+            display: block;
+        }
+        .banner h2 {
+            font-size: 30px;
+            padding-left: 0px;
+            text-align: center;
+        }
+        .banner p {
+            font-size: 20px;
+            /* padding-left: 10px; */
+            /* padding-right: 10px; */
+            padding: 0 35px 0 35px;
+            text-align: justify;
+        }
+        .book_button {
+            margin-left: 200px;
+        }
+        #drop2 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+    

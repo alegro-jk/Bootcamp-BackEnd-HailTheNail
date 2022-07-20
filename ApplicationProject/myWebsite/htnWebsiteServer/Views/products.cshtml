@@ -1,0 +1,45 @@
+@model List<ProductModel>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>products</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/products.css"/>
+        <script src="./js/products.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <div class="pamagat">
+                <h2><span style="color:red">O</span>
+                        <span style="color:orange">U</span>
+                        <span id="space" style="color:yellow">R</span>
+                        <span style="color:green">P</span>
+                        <span style="color:blue">R</span>
+                        <span style="color:indigo">O</span>
+                        <span style="color:violet">D</span>
+                        <span style="color:red">U</span>
+                        <span style="color:orange">C</span>
+                        <span style="color:yellow">T</span>
+                        <span style="color:green">S</span>
+                </h2>
+            </div>
+            <div class="container">
+                <div class="prod">
+                    @for (var x = 0; x <= Model.Count -1; x++)
+                    {
+                        <div>
+                            <h2 style="padding-bottom: 20px;"><b>@Model[x].Name</b></h2>
+                            <img src="./media/@Model[x].Image" width="200px;" height="200px;" style="padding-bottom: 20px;">
+                            <div>₱rice: <i><b>₱ @Model[x].Price</b></i></div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <a href="/bookNow"><button class="book_button">AVAIL NOW!</button></a></div>
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+        <script src="./js/products.js"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+@model List<BranchModel>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Locations</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/locations.css"/>
+        <script src="./js/locations.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <h2><span style="color:red">O</span>
+                <span style="color:orange">U</span>
+                <span id="space" style="color:yellow">R</span>
+                <span style="color:green">B </span>
+                <span style="color:blue"> R</span>
+                <span style="color:indigo">A</span>
+                <span style="color:violet">N</span>
+                <span style="color:pink">C</span>
+                <span style="color:red">H</span>
+                <span style="color:orange">E</span>
+                <span style="color:yellow">S</span>
+            </h2>
+            <p>We try our very best to reach every one of you and give the best care you guys deserve!</p>
+            <p style="padding-bottom: 10px;">Check out the branch near you.</p>
+            <div class="container">
+                <div class="loc">
+                    @for (var x = 0; x <= Model.Count -1; x++)
+                    {
+                        <div>
+                            <h4>@Model[x].Branch</h4>
+                            <p><b>Address:</b></p>
+                            <p>@Model[x].Address</p>
+                            <p>* * *</p>
+                            <p><b>Contact Information:</b></p>
+                            <p>@Model[x].Contact</p>
+                            <p>* * *</p>
+                            <p><b>Hours of operation:</b></p>
+                            <p>@Model[x].Operation</p>
+                            <div>
+                                <iframe src="@Model[x].Map" width="350" height="325" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+        <script src="./js/locations.js"></script>
+    </body>
+</html>

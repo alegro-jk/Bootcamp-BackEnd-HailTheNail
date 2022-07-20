@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hail the Nail</title>
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/htn.css"/>
+        <script src="js/htn.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <div class="tagline"><i>
+                <p>We aim for our customer</p>
+                <p>to tell us that</p>
+                <p>we NAILed it! :)</p></i></div>
+            <div class="carousel">
+                <img src="./media/banner1.jpg" class="changepic" alt="changepic">
+                <img class="changepic" src="./media/banner2.jpg">
+                <img class="changepic" src="./media/banner3.jpg">
+            </div>  
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+    </body>
+</html>

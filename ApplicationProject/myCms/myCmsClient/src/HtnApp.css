@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* div {
+    background-color: rgb(243, 207, 211);
+} */
+/* .logo {
+    padding-left: 35vw;
+    padding-top: 20vh;
+    background-color: rgb(254,151,164);
+} */
+/* #user::placeholder {
+    padding-left: 45vw;
+    font-size: 13px;
+    border: 1px solid black;
+} */
+#Username, #Password {
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    /* border: aquamarine; */
+}
+/* input {
+    border: 1px solid;
+} */
+#submit {
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color:rgb(200, 245, 230);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#logoId {
+    padding-top: 20vh;
+    width: 450px;
+}

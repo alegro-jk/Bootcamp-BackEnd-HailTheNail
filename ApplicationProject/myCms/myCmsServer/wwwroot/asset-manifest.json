@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "./static/css/main.6f5656db.css",
+    "main.js": "./static/js/main.d6e03d92.js",
+    "static/js/787.74314d45.chunk.js": "./static/js/787.74314d45.chunk.js",
+    "static/media/twice1.jpg": "./static/media/twice1.304211439c3ed1c978fe.jpg",
+    "static/media/twice.jpg": "./static/media/twice.8f7bf8f1fcd2588c0aaa.jpg",
+    "static/media/logo.jpg": "./static/media/logo.2949918f39b6b8f6aa10.jpg",
+    "index.html": "./index.html",
+    "main.6f5656db.css.map": "./static/css/main.6f5656db.css.map",
+    "main.d6e03d92.js.map": "./static/js/main.d6e03d92.js.map",
+    "787.74314d45.chunk.js.map": "./static/js/787.74314d45.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f5656db.css",
+    "static/js/main.d6e03d92.js"
+  ]
+}

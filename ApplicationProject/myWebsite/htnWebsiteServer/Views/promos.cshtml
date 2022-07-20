@@ -1,0 +1,40 @@
+@model List<PromoModel>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/promos.css"/>
+        <script src="./js/promos.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <h2><span class="space" style="color:red">Avail</span>
+                <span class="space" style="color:orange">our</span>
+                <span class="space" style="color:yellow">New</span>
+                <span class="space" style="color:green">Year</span>
+                <span class="space" style="color:blue">Promo</span>
+                <span style="color:indigo">Now</span>
+                <span style="color:violet">!</span>
+                <span style="color:pink">!</span>
+                <span style="color:red">!</span>
+            </h2>
+            <div class="container">
+                <div class="prod">
+                    @for (var x = 0; x <= Model.Count -1; x++)
+                    {
+                        <div>
+                            <h2><b>• @Model[x].Name</b></h2>
+                            <p><i><b>Validity:@Model[x].Period</b></i></p>
+                            <img src="./media/@Model[x].Image" id="dpromo"/>
+                        </div>
+                    }
+                </div>
+            </div>   
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+        <script src="./js/promos.js"></script>
+    </body>
+</html>

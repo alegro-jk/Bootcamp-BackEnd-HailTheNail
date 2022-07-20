@@ -1,0 +1,152 @@
+@model BookingModel
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ORDER CONFIRMATION</title>
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/bookingConfirmation.css"/>
+        <script src="js/bookingConfirmation.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <div>
+            <h2 class="instruction">
+                <span style="color:red">O</span>
+                <span style="color:orange">R</span>
+                <span style="color:yellow">D</span>
+                <span style="color:green">E</span>
+                <span id="space" style="color:blue">R</span>
+                <span style="color:indigo">C</span>
+                <span style="color:violet">O</span>
+                <span style="color:pink">N</span>
+                <span style="color:red">F</span>
+                <span style="color:orange">I</span>
+                <span style="color:yellow">R</span>
+                <span style="color:green">M</span>
+                <span style="color:blue">A</span>
+                <span style="color:indigo">T</span>
+                <span style="color:violet">I</span>
+                <span style="color:pink">O</span>
+                <span style="color:red">N</span>
+            </h2>
+        </div>
+        <div id="orderTable">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            @* <tr>
+                                <th>ID</th>
+                            </tr> *@
+                            <tr>
+                                <th>First Name</th>
+                            </tr>
+                            <tr>
+                                <th>Last Name</th>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                            </tr>
+                            <tr>
+                                <th>Phone Number</th>
+                            </tr>
+                            <tr>
+                                <th>Method of Contact</th>
+                            </tr>
+                            <tr>
+                                <th>Service/s availed</th>
+                            </tr>
+                            <tr>
+                                <th>Product/s availed</th>
+                            </tr>
+                            <tr>
+                                <th>Preferred Branch</th>
+                            </tr>
+                            <tr>
+                                <th>Preferred Technician</th>
+                            </tr>
+                            <tr>
+                                <th>Date of Visit</th>
+                            </tr>
+                            <tr>
+                                <th>Time Of Visit</th>
+                            </tr>
+                            <tr>
+                                <th>Number of Guest/s</th>
+                            </tr>
+                            <tr>
+                                <th>Special Request</th>
+                            </tr>
+                            <tr>
+                                <th>Order Date</th>
+                            </tr>
+                            <tr>
+                                <th>Total Amount</th>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            @if(Model != null)
+                            {
+                                @* <tr>
+                                    <td>@Model.Id</td>
+                                </tr> *@
+                                <tr>
+                                    <td>@Model.FirstName</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.LastName</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.Email</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.PhoneNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.MethodOfContact</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.AvailServices</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.AvailProducts</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.PreferredBranch</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.PreferredTechnician</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.DateOfVisit</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.TimeOfVisit</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.GuestNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.Request</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.Orderdate</td>
+                                </tr>
+                                <tr>
+                                    <td>@Model.Totalamount</td>
+                                </tr>
+                            }
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+    </body>
+</html>

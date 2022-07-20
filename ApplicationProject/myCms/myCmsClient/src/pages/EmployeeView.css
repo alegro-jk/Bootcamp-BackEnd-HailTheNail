@@ -1,0 +1,77 @@
+#hdrlogo {
+    width: 150px;
+}
+.header {
+    /* width: 100vh;
+    height: 80px; */
+    /* position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+    padding-top: 8px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-bottom: 0.25px solid rgb(255,95,162);
+
+    /* size: 40px; */
+}
+#greeting {
+    float: right;
+    padding-top: 25px;
+    font-size: 25px;
+}
+
+.content {
+    /* display: flex; */
+    position: absolute;
+    margin-left: 340px;
+    /* padding-left: 270px; */
+    background-color: rgb(215, 251, 253);
+    width: 1060px;
+    height: 625px;
+    border-radius: 10px;
+    padding: 15px;
+}
+#twicelogo1 {
+    width: 1025px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.sidebar {
+    position: absolute;
+    /* margin-left: 20px; */
+    background-color: rgb(209, 252, 238);
+    width: 320px;
+    height: 625px;
+    /* margin-top: 15px; */
+    /* bottom: 20px; */
+    /* border-color: 1px solid black; */
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-top: 30px;
+    
+}
+#info {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+#logout {
+    text-decoration: none;
+    background-color: rgb(255, 220, 250);
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+h1 {
+    font-size: 40px;
+}
+a {
+    font-size: 28px;
+}
+h2 {
+    font-size: 28px;
+}

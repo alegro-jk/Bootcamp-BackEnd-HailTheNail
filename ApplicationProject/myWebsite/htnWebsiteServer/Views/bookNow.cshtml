@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOOK NOW</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/bookNow.css"/>
+        <script src="./js/bookNow.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+        <div class="banner">
+            <h2 class="instruction">
+                <span style="color:red">O</span>
+                <span style="color:orange">R</span>
+                <span style="color:yellow">D</span>
+                <span style="color:green">E</span>
+                <span id="space" style="color:blue">R</span>
+                <span style="color:indigo">F</span>
+                <span style="color:violet">O</span>
+                <span style="color:pink">R</span>
+                <span style="color:red">M</span>
+            </h2>
+            <div class="orderform">
+                <b><i><p class="instruction">Please fill out the needed information for the booking services:
+                </i></b></p>
+                <form method="POST" action="/bookingConfirmation">
+                    <label><b>• First name:</b></label><br>
+                    <input type="text" id="fname" name="FirstName" size="40" style="font-family: monospace;" maxlength="20"
+                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"><br><br>
+                    <b><label>• Last name:</label></b><br>
+                        <input type="text" id="lname" name="LastName" size="40" style="font-family: monospace;" maxlength="20"
+                            onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"><br><br>
+                        @* <label>• Date of Birth:</label><br>
+                        <input type="date" id="birthday" size="50" style="font-family: monospace; font-size: 15px;"
+                            min="Date()"><br><br> *@
+                    <b><label>• E-mail:</label></b><br>
+                        <input type="email" name="Email" id="email" size="40" style="font-family: monospace;" maxlength="40"><br><br>
+                    <b><label>• Phone number:</label></b><br>
+                        <input type="tel" id="phone" name="PhoneNumber" size="40" style="font-family: monospace;" maxlength="11"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br><br>
+                    <div id="contact">
+                    <b><p>• Preferred method of contact: </p></b>
+                        <input type="radio" value="e-mail" name="option" style="font-family: monospace;">
+                        <label>e-mail</label><br>
+                        <span id="cel"><input type="radio" value="phone" name="option" style="font-family: monospace;">
+                        <label>phone</label></span><br>
+                        <input type="radio" value="either" name="option" style="font-family: monospace;">
+                        <label>either</label></div><br>
+
+                    <div id="avail2">
+                    <b><p>• Product/s to be availed:</p></b>
+                        <input type="checkbox" class="prods" name="prods" value="Nail Dryer" style="font-family: monospace;">
+                        <label> Nail Dryer</label><br>
+                        <span id="polish"><input type="checkbox" class="prods" name="prods" value="Nail Polish Set" style="font-family: monospace;">
+                        <label> Nail Polish Set</label></span><br>
+                        <span id="kit"><input type="checkbox" class="prods" name="prods" value="Manicure Kit" style="font-family: monospace;">
+                        <label> Manicure Kit</label></span><br>
+                        <span id="none2"><input type="checkbox" class="prods" name="prods" value="None" style="font-family: monospace;">
+                        <label> None</label></span></div><br><br>
+
+                    <div id="avail1">
+                    <b><p>• Service/s to be availed:</p></b>
+                    <p style="font-size:12px;">Please only choose up to 2 services as we implement 1-hour maximum stay inside the salon following health protocols.</p>
+                        <input type="checkbox" class="serv" name="serv" value="Manicure" style="font-family: monospace;">
+                        <label> Manicure</label><br>
+                        <input type="checkbox" class="serv" name="serv" value="Pedicure" style="font-family: monospace;">
+                        <label> Pedicure</label><br>
+                        <span id="ext"><input type="checkbox" class="serv" name="serv" value="Nail Art" style="font-family: monospace;">
+                        <label> Nail Art</label></span><br>
+                        <span id="cryo"><input type="checkbox" class="serv" name="serv" value="Cryotherapy" style="font-family: monospace;">
+                        <label> Cryotherapy</label></span><br>
+                        <span id="peel"><input type="checkbox" class="serv" name="serv" value="Chemical Peeling" style="font-family: monospace;">
+                        <label> Chemical Peeling</label></span><br>
+                        <span id="none1"><input type="checkbox" class="serv" name="serv" value="None" style="font-family: monospace;">
+                        <label> None</label></span></div><br><br>
+
+                    <div id="pref_branch">
+                    <select name="branch" style="font-family: monospace; font-size: 15px;">
+                        <option value="" disabled selected hidden>Preferred Branch:</option>
+                        <option class="branchh"  value="Silang">Silang</option>
+                        <option class="branchh"  value="Gentri">Gentri</option>
+                        <option class="branchh"  value="Nasugbu">Nasugbu</option>
+                    </select></div><br><br>
+                    
+                    <b><label>• Number of Guest/s:</label></b>
+                        <input type="number" id="guest" name="guest" min="1" max="3"><br><br>
+
+                    <div id="pref_tech">
+                    <b><p>• Preferred Technician:</p></b>
+                    <p style="font-size:12px;">If guest is more than one (1), please choose staff for each guest.</p>
+                        <input type="checkbox" class="staff" name="staff" value="Im Nayeon" style="font-family: monospace;">
+                        <label>[Silang] Im Nayeon</label><br>
+                        <span id="jy"><input type="checkbox" class="staff" name="staff" value="Yoo Jeongyeon" style="font-family: monospace;">
+                        <label>[Silang] Yoo Jeongyeon</label></span><br>
+                        <span id="mm"><input type="checkbox" class="staff" name="staff" value="Hirai Momo" style="font-family: monospace;">
+                        <label>[Silang] Hirai Momo</label></span><br>
+                        <span id="sn"><input type="checkbox" class="staff" name="staff" value="Minatozaki Sana" style="font-family: monospace;">
+                        <label>[Gentri] Minatozaki Sana</label></span><br>
+                        <span id="jh"><input type="checkbox" class="staff" name="staff" value="Park Jihyo" style="font-family: monospace;">
+                        <label>[Gentri] Park Jihyo</label></span><br>
+                        <span id="mn"><input type="checkbox" class="staff" name="staff" value="Myoui Mina" style="font-family: monospace;">
+                        <label>[Gentri] Myoui Mina</label></span><br>
+                        <span id="dh"><input type="checkbox" class="staff" name="staff" value="Kim Dahyun" style="font-family: monospace;">
+                        <label>[Nasugbu] Kim Dahyun</label></span><br>
+                        <span id="cy"><input type="checkbox" class="staff" name="staff" value="Son Chaeyoung" style="font-family: monospace;">
+                        <label>[Nasugbu] Son Chaeyoung</label></span><br>
+                        <span id="ty"><input type="checkbox" class="staff" name="staff" value="Chou Tzuyu" style="font-family: monospace;">
+                        <label>[Nasugbu] Chou Tzuyu</label></span><br>
+                        @* <select name="staff" style="font-family: monospace; font-size: 15px;">
+                            <input value="" disabled selected hidden>Preferred Technician:</input>
+                            <input class="techni" value="Tech 1">Im Nayeon - Silang</input>
+                            <input class="techni" value="Tech 2">Yoo Jeongyeon - Silang</input>
+                            <input class="techni" value="Tech 3">Hirai Momo - Silang</input>
+                            <input class="techni" value="Tech 3">Minatozaki Sana - Gentri</input>
+                            <input class="techni" value="Tech 3">Park Jihyo - Gentri</input>
+                            <input class="techni" value="Tech 3">Myoui Mina - Gentri</input>
+                            <input class="techni" value="Tech 3">Kim Dahyun - Nasugbu</input>
+                            <input class="techni" value="Tech 3">Son Chaeyoung - Nasugbu</input>
+                            <input class="techni" value="Tech 3">Chou Tzuyu - Nasugbu</input> *@
+                            @* <option class="techni" value="Anyone Available">Anyone available</option> *@
+                        </div><br><br>
+                    <b><label>• Date of Visit:</label></b><br>
+                        <input type="date" id="day_visit" name="day_visit" style="font-family: monospace; font-size: 15px;"><br><br>
+                    <div id="time">
+                    <b><p>• Time of Visit: </p></b>
+                        <input type="radio" value="10:00 AM" name="option1" style="font-family: monospace;">
+                        <label>10:00 AM</label>
+                        <input type="radio" value="04:00 PM" name="option1" style="font-family: monospace;">
+                        <label>04:00 PM</label><br>
+                        <input type="radio" value="11:00 AM" name="option1" style="font-family: monospace;">
+                        <label>11:00 AM</label>
+                        <input type="radio" value="05:00 PM" name="option1" style="font-family: monospace;">
+                        <label>05:00 PM</label><br>
+                        <input type="radio" value="12:00 PM" name="option1" style="font-family: monospace;">
+                        <label>12:00 PM</label>
+                        <input type="radio" value="06:00 PM" name="option1" style="font-family: monospace;">
+                        <label>06:00 PM</label><br>
+                        <input type="radio" value="01:00 PM" name="option1" style="font-family: monospace;">
+                        <label>01:00 PM</label>
+                        <input type="radio" value="07:00 PM" name="option1" style="font-family: monospace;">
+                        <label>07:00 PM</label><br>
+                        <input type="radio" value="02:00 PM" name="option1" style="font-family: monospace;">
+                        <label>02:00 PM</label>
+                        <input type="radio" value="08:00 PM" name="option1" style="font-family: monospace;">
+                        <label>08:00 PM</label><br>
+                        <input type="radio" value="03:00 PM" name="option1" style="font-family: monospace;">
+                        <label>03:00 PM</label>
+                        <input type="radio" value="09:00 PM" name="option1" style="font-family: monospace;">
+                        <label>09:00 PM</label>
+                    </div><br><br>
+                    @* <label>• Time of Visit:</label><br>
+                    <input type="number" id="time_visit" name="time_visit" min="1" max="12">
+                    <select name="ampm" style="font-family: monospace; font-size: 15px;">
+                        <option value="am">AM</option>
+                        <option value="pm">PM</option>
+                    </select></div><br><br> *@
+                    
+                    <b><label id="req">• Any request:</label></b><br>
+                        <textarea rows="4" cols="50" name="request"placeholder="Type here"></textarea maxlenth="200"><br><br>
+                    <input type="submit" value="Submit" style="font-family: monospace; font-size: 15px;"
+                        onclick="formdata()">
+                    <br><br>
+                </form>
+            </div>
+            
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+        <script src="./js/bookNow.js"></script>
+        
+    </body>
+</html>

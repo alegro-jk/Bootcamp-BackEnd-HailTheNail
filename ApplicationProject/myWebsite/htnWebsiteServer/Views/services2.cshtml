@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Services - Pedicure</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/services2.css"/>
+        <script src="./js/services2.js"></script>
+    </head>
+    <body>
+        @await Html.PartialAsync("_Header.cshtml")
+            <div class="banner">
+                <h2><span style="color:red">P</span>
+                    <span style="color:orange">E</span>
+                    <span style="color:yellow">D</span>
+                    <span style="color:green">I</span>
+                    <span style="color:blue">C</span>
+                    <span style="color:indigo">U</span>
+                    <span style="color:violet">R</span>
+                    <span style="color:pink">E</span></h2>
+                <p>Details:</p>
+                <p>• The process includes trimming, shaping, filing, and buffing your toe nails, tending to your cuticles, exfoliating, hydrating and massaging your feet.</p>
+                <p>• The painting of your toe nails at the end is optional, so don't feel pressured if you don't actually want nail polish.</p>
+                <!-- <br> -->
+                <p>₱rice: <i><b>₱ 349</b></i></p>
+                <div>
+                    <a href="/bookNow"><button class="book_button">BOOK NOW!</button></a></div>
+                </div>
+            </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+        <script src="./js/services2.js"></script>
+    </body>
+</html>

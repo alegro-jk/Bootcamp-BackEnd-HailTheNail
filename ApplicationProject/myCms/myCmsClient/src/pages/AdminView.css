@@ -1,0 +1,78 @@
+.body {
+    position: fixed;
+    margin-top: 17px;
+    margin-left: 20px;
+}
+.sidebar {
+    padding-left: 20px;
+}
+.content {
+    /* display: flex; */
+    position: absolute;
+    margin-left: 340px;
+    /* padding-left: 270px; */
+    background-color: rgb(215, 251, 253);
+    width: 1060px;
+    height: 625px;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-y: scroll;
+}
+#twicelogo {
+    width: 1025px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+#title {
+    text-align: center;
+    font-family: monospace;
+  }
+  
+#table {
+text-align: center;
+font-family: monospace;
+border-collapse: collapse;
+border: 3px solid rgb(221, 221, 221);
+width: 100%;
+font-size: 12px;
+}
+
+#table td, #table th {
+border: 1px solid rgb(255, 255, 255);
+padding: 8px;
+}
+
+#table tr{background-color: rgb(209, 252, 238);}
+
+#table th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+background-color: rgb(216, 216, 216);
+color: rgb(0, 0, 0);
+}
+
+#logout {
+    text-decoration: none;
+    background-color: rgb(255, 220, 250);
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.sidebar h1 {
+    font-size: 28px;
+}
+.sidebar a {
+    font-size: 20px;
+}
+.sidebar h2 {
+    font-size: 20px;
+}
+.content h1 {
+    font-size: 28px;
+}
+.content h2 {
+    font-size: 20px;
+}
